@@ -1,14 +1,3 @@
-/*
-  Trabalho 1 - OpenGL (Vers„o Melhorada)
-  Esfera com movimento 3D aleatÛrio, iluminaÁ„o din‚mica, 
-  c‚mera interativa, rastro visual e m˙ltiplos modos.
-  
-  Compilar (Linux):
-    gcc trabalho1_opengl.c -o trabalho1_opengl -lGL -lGLU -lglut -lm
-  Compilar (Windows, MinGW):
-    gcc trabalho1_opengl.c -o trabalho1_opengl -lopengl32 -lglu32 -lfreeglut -lm
-*/
-
 #include <GL/freeglut.h>
 #include <stdlib.h>
 #include <time.h>
@@ -25,7 +14,7 @@ typedef struct {
     float alpha;
 } TrailPoint;
 
-// ==================== VARI¡VEIS GLOBAIS ====================
+// ==================== VARI√ÅVEIS GLOBAIS ====================
 static float spherePos[3] = {0.0f, 0.0f, 0.0f};
 static float sphereDir[3];
 static float speed = 0.015f;
@@ -52,7 +41,7 @@ static float lightRotation = 0.0f;
 static int bounceCount = 0;
 static float distanceTraveled = 0.0f;
 
-// ==================== PROT”TIPOS ====================
+// ==================== PROT√ìTIPOS ====================
 void setRandomDirection();
 void addTrailPoint();
 void updateTrail();
@@ -66,7 +55,7 @@ void reshape(int w, int h);
 void keyboard(unsigned char key, int x, int y);
 void specialKeys(int key, int x, int y);
 
-// ==================== IMPLEMENTA«’ES ====================
+// ==================== IMPLEMENTA√á√ïES ====================
 
 void setRandomDirection() {
     sphereDir[0] = ((float)rand() / RAND_MAX) * 2.0f - 1.0f;
@@ -453,7 +442,7 @@ int main(int argc, char** argv) {
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(700, 600);
     glutInitWindowPosition(100, 100);
-    glutCreateWindow("Trabalho 1 - OpenGL 3D (Versao Melhorada)");
+    glutCreateWindow("Trabalho 1 - OpenGL 3D");
     
     initGL();
     setRandomDirection();
